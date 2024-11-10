@@ -7,7 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body style="backdrop-filter: blur(5px)">
+<body class="backImg" style="backdrop-filter: blur(5px)">
 <div class="wrapper">
   <div  class="main-box1"  id="register">
       <div class="top1">
@@ -15,29 +15,35 @@
           <span style="color: black">Have an account? <a href="loginForm.html" >Login</a></span>
           <header >Sign Up</header>
       </div>
+      <p id="error-message"></p>
+      <form id="form">
 
           <div class="input_box">
-              <input  type="text" class="input-field" placeholder=" Firstname">
+              <label for="firstName"></label>
+              <input  type="text" class="input-field" id="firstName" placeholder=" Firstname">
               <i  class="bx bx-user icon1"></i>
           </div>
 
           <div class="input_box">
-              <input type="text" class="input-field" placeholder=" Lastname">
+              <label for="lastName"></label>
+              <input type="text" class="input-field" id="lastName" placeholder=" Lastname">
               <i  class="bx bx-user icon1"></i>
           </div>
 
           <div class="input_box">
-              <input type="email" class="input-field" placeholder=" Email">
+              <label for="email"></label>
+              <input type="email" class="input-field" id="email" placeholder=" Email">
               <i  class="bx bx-envelope icon1"></i>
           </div>
 
           <div class="input_box">
-              <input type="password" class="input-field" placeholder=" Password">
+              <label for="password"></label>
+              <input type="password" class="input-field"  id="password" placeholder=" Password">
               <i  class="bx bx-lock-alt icon1"></i>
           </div>
 
           <div class="input_box">
-              <input type="submit" class="input-submit" value="Register">
+              <button type="submit" class="input-submit" id="signup">Register</button>
           </div>
 
           <div class="two-col">
@@ -50,10 +56,11 @@
                   <label><a href=""></a>Terms and Conditions</label>
               </div>
           </div>
-
+      </form>
       </div>
   </div>
 
+<script type="module" src="controller/registerForm.js"></script>
 
 </body>
 </html>
